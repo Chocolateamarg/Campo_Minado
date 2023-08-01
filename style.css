@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI Emoji", sans-serif;
+    background-image: url("img/cidade 2.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  
+  #board {
+    background-color: white;
+    width: 420px;
+    height: 420px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid red;
+    animation: borderBlink 5s infinite;
+  }
+  
+  @keyframes borderBlink {
+    0% { border-color: red; }
+    14% { border-color: orange; }
+    28% { border-color: yellow; }
+    42% { border-color: green; }
+    57% { border-color: blue; }
+    71% { border-color: indigo; }
+    85% { border-color: violet; }
+    100% { border-color: red; }
+  }
+  
+  .tile {
+    width: 40px;
+    height: 40px;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .tile.mine {
+    background-color: white;
+  }
+  
+  .tile.flagged {
+    background-color: white;
+  }
+  
+  .tile.revealed {
+    background-color: #858282;
+  }
+  
+  .tile.number {
+    font-size: 12px;
+  }
+  
+  h1 {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  }
+  
+  .bomb {
+    font-size: 20px;
+  }
